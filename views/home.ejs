@@ -1,0 +1,13 @@
+<%- include("partials/header"); -%>
+<h1>Hello</h1>
+<p><%=homeStartingContentKEY%></p>
+
+<% console.log("posts="+postsKEY) %> 
+
+    <% postsKEY.forEach(function(post){ %> 
+        <h1><%= post.title %> </h1> 
+        <p><%= post.content %> </p>
+    <% }) %> 
+
+
+<%- include("partials/footer"); -%>
