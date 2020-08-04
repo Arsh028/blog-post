@@ -64,12 +64,14 @@ app.get("/posts/:postName",function(req,res){
     const storedTitle = _.lowerCase(post.title);
     if(reqTitle === storedTitle)
     {
-      console.log("match found");
+      res.render("post",{
+        title : post.title,
+        content : post.content
+      });
     } 
   });
 
 });
-
 
 app.listen(3000, function() {
   console.log("Server started on port 3000");
